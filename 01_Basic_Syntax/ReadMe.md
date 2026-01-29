@@ -9,9 +9,35 @@ ABAP 개발의 가장 기본이 되는 변수 선언, 데이터 출력, 그리�
 - **조건문 (IF...ELSE)**: 논리 조건에 따른 로직 분기 처리 기초 습득
 
 
-## 🔗 SE80 코드
+## 🔗 SE80 화면
 <img width="1485" height="965" alt="BasicCalCCode" src="https://github.com/user-attachments/assets/4865216d-803b-47cf-815b-225bb2bdeba8" />
 
 
 ## 🖼 실행 결과
 <img width="1485" height="965" alt="BasicCalCResult" src="https://github.com/user-attachments/assets/8224e0da-22ff-4581-bc42-8f4c5df3ef4c" />
+
+## ABAP 코드 전문
+REPORT Z_BASIC_CALC_YOUTAEK.
+
+* 1. 데이터 선언 (Data Declaration)
+DATA: lv_name  TYPE string VALUE 'YOUTAEK',
+      lv_val1  TYPE i      VALUE 100,
+      lv_val2  TYPE i      VALUE 50,
+      lv_res   TYPE i.
+
+* 2. 산술 연산 (Arithmetic Operation)
+lv_res = lv_val1 + lv_val2.
+
+* 3. 화면 출력 (Basic Output)
+WRITE: 'Hello, SAP World! I am', lv_name COLOR 4.
+ULINE.
+WRITE: / 'Value 1  :', lv_val1,
+       / 'Value 2  :', lv_val2,
+       / 'Total    :', lv_res COLOR 3.
+
+* 4. 조건문 맛보기 (IF Statement)
+IF lv_res >= 100.
+  WRITE: / 'Result is over 100.' COLOR 5.
+ELSE.
+  WRITE: / 'Result is under 100.' COLOR 6.
+ENDIF.
