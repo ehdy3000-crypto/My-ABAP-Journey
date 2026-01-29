@@ -17,6 +17,7 @@ ABAP 개발의 가장 기본이 되는 변수 선언, 데이터 출력, 그리�
 <img width="1485" height="965" alt="BasicCalCResult" src="https://github.com/user-attachments/assets/8224e0da-22ff-4581-bc42-8f4c5df3ef4c" />
 
 ## ABAP 코드 전문
+```abap
 REPORT Z_BASIC_CALC_YOUTAEK.
 
 * 1. 데이터 선언 (Data Declaration)
@@ -31,6 +32,7 @@ lv_res = lv_val1 + lv_val2.
 * 3. 화면 출력 (Basic Output)
 WRITE: 'Hello, SAP World! I am', lv_name COLOR 4.
 ULINE.
+
 WRITE: / 'Value 1  :', lv_val1,
        / 'Value 2  :', lv_val2,
        / 'Total    :', lv_res COLOR 3.
